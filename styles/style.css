@@ -11,7 +11,7 @@
   --gray-light: #878787;
   --gray-mid-1: #373737;
   --gray: #3b3b3b;
-  --font-lato: 'Lato', sans-serif;
+  --font-lato: 'Roboto', sans-serif;
   --white: #ffffff; }
 
 .outline-y {
@@ -218,7 +218,8 @@ ul {
     margin: 0;
     font-size: 30px;
     line-height: 35px;
-    font-weight: 700; }
+    font-weight: 700;
+    text-transform: uppercase; }
   .profile__position {
     color: var(--clr-2);
     font-weight: 300;
