@@ -14,6 +14,10 @@
   --font-lato: 'Roboto', sans-serif;
   --white: #ffffff; }
 
+a.to-section {
+  display: block;
+  outline: none; }
+
 .outline-y {
   outline: 1px solid yellow; }
 
@@ -40,7 +44,8 @@ a {
 
 html {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  scroll-behavior: smooth; }
 
 body {
   padding: 0;

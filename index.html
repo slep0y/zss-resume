@@ -61,13 +61,15 @@
         <div class="main">
             <div class="wrapper">
                 <div class="page">
-                    <div class="page__profile profile">
+                    <div class="page__profile profile" id="profile">
                         <div class="pageControl page__control">
+                            <a href="#profile" class="to-section">
                             <span class="section__icon" style="background-color: #4ca5d0">
                                 <i class="fas fa-user"></i>
                             </span>
                             <span class="section__label" style="background-color: #4ca5d0">Профиль</span>
                             <span class="control__indicator"></span>
+                            </a>
                         </div>
                         <div class="profile__bio">
                             <img class="profile__image" src="profile/profile-photo1.jpg" alt="my photo">
@@ -113,13 +115,15 @@
                         </div>
                         
                     </div>
-                    <div class="page__resume resume">
+                    <div class="page__resume resume" id="resume">
                         <div class="pageControl page__control">
+                            <a href="#" class="to-section">
                             <span class="section__icon" style="background-color: #6ca338">
                                 <i class="fas fa-align-left"></i>
                             </span>
                             <span class="section__label" style="background-color: #6ca338">Резюме</span>
                             <span class="control__indicator control__indicator_inv"></span>
+                            </a> 
                         </div>
                         <div class="slide resume__full">
                             <div class="resume__main">
@@ -317,13 +321,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="page__portfolio portfolio">
+                    <div class="page__portfolio portfolio" id="portfolio">
                         <div class="pageControl page__control">
+                            <a href="#portfolio" class="to-section">
                             <span class="section__icon" style="background-color: #ffbc38">
                                 <i class="fas fa-briefcase"></i>
                             </span>
                             <span class="section__label" style="background-color: #ffbc38">Портфолио</span>
                             <span class="control__indicator control__indicator_inv"></span>
+                            </a>
                         </div>
                         <div class="slide portfolio__gallery gallery">
                             <div class="gallery__filter">
@@ -392,14 +398,16 @@
                             <div class="gallery__paginator"></div>
                         </div>
                     </div>
-                    <div class="page__testimonials testimonials">
+                    <div class="page__testimonials testimonials" id="testimonials">
                         <div class="pageControl page__control">
+                            <a href="#testimonials" class="to-section">
                             <span class="section__icon" style="background-color: #327ea3">
                                 <i class="fas fa-quote-right"></i>
                             </span>
                             <span class="section__label" style="background-color: #327ea3">Отзывы
                             </span>
                             <span class="control__indicator control__indicator_inv"></span>
+                            </a>
                         </div>
                         <div class="slide testimonials__content">
                             <div class="testimonials__post">
@@ -430,14 +438,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="page__contacts contacts">
+                    <div class="page__contacts contacts" id="contacts">
                         <div class="pageControl page__control">
+                            <a href="#contacts" class="to-section">
                             <span class="section__icon" style="background-color: #e82c0c">
                                 <i class="fas fa-envelope"></i>
                             </span>
                             <span class="section__label" style="background-color: #e82c0c">Контакты
                             </span>
                             <span class="control__indicator control__indicator_inv"></span>
+                            </a>
                         </div>
                         <div class="slide contacts__full">
                             <div class="contacts__map-container">
@@ -481,6 +491,11 @@
                     .next().next('.slide')
                     .slideToggle('300');
             });
+            $('.to-section').on('click', function(e){
+                $('html,body').stop().animate({ scrollTop: $(this).parent().parent().offset().top }, 500);
+                e.preventDefault();
+            });
+
         </script>
         <script type="text/javascript">
             // Функция ymaps.ready() будет вызвана, когда загрузятся все компоненты API, а
