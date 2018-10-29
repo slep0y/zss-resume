@@ -483,7 +483,7 @@
         <script>
             $('.slide:not(.profile .slide)').hide();
             $('.pageControl').click(function () {
-                $(this).children('.control__indicator').toggleClass('control__indicator_inv');
+                $(this).children().children('.control__indicator').toggleClass('control__indicator_inv');
                 $(this)
                     .next('.slide')
                     .slideToggle('300');
